@@ -1,0 +1,7 @@
+#阻止发送到特定端口的流量
+iptables -A OUTPUT -p tcp -dport 21 -j DROP
+
+如果你不希望访问特定站点（例如恶意站点），可以阻止发送到该IP地址的流量：
+iptables -A OUTPUT -d 8.8.8.8 -j DROP
+
+
